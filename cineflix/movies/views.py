@@ -184,11 +184,7 @@ class MovieDetailsView (View) :
 
         movie = Movie.objects.get(uuid = uuid)
 
-        data = {'movie' : movie,
-                
-                'page': movie.name
-                
-                }
+        data = {'movie' : movie,'page': movie.name,}
 
         return render(request,self.template,context=data)
     
